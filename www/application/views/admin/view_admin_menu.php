@@ -1,5 +1,5 @@
 <?php 
-foreach($data['return'] as $elem)
+foreach($data['result'] as $elem)
 {
     echo "<p>".$elem[0]." ".$elem[1]."</p>";
 }

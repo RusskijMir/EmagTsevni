@@ -11,7 +11,7 @@ class View
     
     public function generate($content_view, $data = null)
     {
-        include 'templates/'.$this->template.'.php';
+        include 'templates/'.$this->template.'/'.$this->template.'.php';
     }
 }
 

@@ -11,14 +11,14 @@ class Controller_Admin extends Controller
         $this->view->generate('view_admin.php');
     }
     
-    public function action_addmenu()
+    public function action_menu()
     {
         if(isset($_POST["add"]))
         {
             $this->data = $this->model->addMenu();
         }
         $this->data = $this->model->getMenu();
-        $this->view->generate('admin/view_admin_addmenu.php', $this->data);
+        $this->view->generate('admin/view_admin_menu.php', $this->data);
     }
 }
 

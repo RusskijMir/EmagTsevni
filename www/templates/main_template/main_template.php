@@ -5,6 +5,7 @@
         <title>На всех страницах одно и то же</title>
     </head>
     <body>
+        <?php include 'header.php'?>        
         <?php include 'application/views/'.$content_view ?>        
     </body>
 </html>

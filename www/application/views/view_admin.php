@@ -1,1 +1,1 @@
-<a href="admin/addmenu">Создать меню</a>
+<a href="admin/menu">Создать меню</a>

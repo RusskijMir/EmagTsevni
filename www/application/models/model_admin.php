@@ -40,8 +40,8 @@ class Model_Admin extends Model
     public function getMenu()
     {
         $this->db->query("SELECT `header`,`link` FROM `db_menu`");
-        $data['return'] = array();
-        while($data['return'][] = $this->db->fetch_row());
+        $data['result'] = array();
+        while($data['result'][] = $this->db->fetch_row());
         return $data;
     }
 }
