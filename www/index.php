@@ -8,8 +8,9 @@
     {
         require_once 'application/classes/'.strtolower($class_name).'.php';
     }
-    session_start();  
+    session_start();    
     Route::start();
+    session_destroy();
 ?>
 
 

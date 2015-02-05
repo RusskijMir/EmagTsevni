@@ -8,16 +8,19 @@ class Controller_Admin extends Controller
     }
 
     public function action_index() {
-        $this->view->generate('view_admin.php');
+        $this->view->generate('admin/view_admin.php');
     }
     
     public function action_menu()
     {
-        if(isset($_POST["add"]))
+        if($this->modelMethodInvoked())
         {
-            $this->data = $this->model->addMenu();
+            $this->data = $this->model->$_REQUEST['action']();
+        }       
+        else
+        {
+            $this->data = $this->model->getMenuList();
         }
-        $this->data = $this->model->getMenu();
         $this->view->generate('admin/view_admin_menu.php', $this->data);
     }
 }

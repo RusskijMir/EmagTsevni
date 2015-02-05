@@ -6,12 +6,12 @@ class View
     
     public function __construct() 
     {
-        $this->template = 'main_template';
+        $this->template = 'template';
     }
     
     public function generate($content_view, $data = null)
     {
-        include 'templates/'.$this->template.'/'.$this->template.'.php';
+        include 'application/views/'.$this->template.'/'.$this->template.'.php';
     }
 }
 

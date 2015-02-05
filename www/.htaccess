@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^.*[^\.css]$ index.php [L]
+RewriteRule ^[^\.]*.((html)|(php)|(htm))?$ index.php [L]

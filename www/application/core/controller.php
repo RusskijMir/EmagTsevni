@@ -13,5 +13,17 @@ class Controller
     {
         
     }
+    
+    public function modelMethodInvoked()
+    {
+        if(isset($_GET['action']))
+        {
+            if(method_exists($this->model, $_GET['action']))
+            {
+                return true;
+            }            
+        }
+        return false;
+    }
 }
 

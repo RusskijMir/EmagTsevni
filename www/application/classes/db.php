@@ -42,5 +42,9 @@ class Db
     {
         return mysqli_real_escape_string($this->con, $string);
     }
+    
+    function __destruct() {
+        mysqli_close($this->con);
+    }
 }
 

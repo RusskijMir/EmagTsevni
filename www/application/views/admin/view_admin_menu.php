@@ -1,17 +1,29 @@
+<div>
+<?php if(isset($data['menu']))
+{   
+?>
+<table>
 <?php 
-foreach($data['result'] as $elem)
+    $i = 0;
+    foreach($data['menu'] as $elem)
+    {
+        $i++;
+        echo "<tr><td>".$elem[0]."</td><td>".$elem[1]."</td><td>".$elem[2]."</td>"
+                . "<td><a href='?action=change&id=$elem[0]'>Редактировать</a></td>"
+                . "<td><a href='?action=remove&id=$elem[0]'>Удалить</a></tr>";
+    }
+?>
+</table>
+<?php
+}
+else
 {
-    echo "<p>".$elem[0]." ".$elem[1]."</p>";
+   echo 'Ни одно меню еще не добавлено'; 
 }
 ?>
+</div>
 <div>
     <form action="" method="post">
-        <div>Заголовок:
-            <input name="header" type="text" size="50" maxlength="50">
-        </div>
-        <div>Относительная ссылка:
-            <input name="link" type="text" size="50" maxlength="50">
-        </div>
         <input name="add" type="submit" value="Добавить">
     </form>
 </div>
