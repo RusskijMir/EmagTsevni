@@ -3,9 +3,15 @@
 class Model_Admin extends Model
 {
     private $db;
+    private $polymorph;
     
     public function __construct() {
         $this->db = new Db(Config::hostDb, Config::userDb, Config::passDb, Config::baseDb);
+    }
+    
+    public function initPolymorph($class_name)
+    {
+        $this->polymorph = new $class_name;
     }
     
     public function addmenu()

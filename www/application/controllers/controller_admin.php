@@ -13,6 +13,7 @@ class Controller_Admin extends Controller
     
     public function action_menu()
     {
+        $this->model->initPolymorph("Menu_Manager");
         if($this->modelMethodInvoked())
         {
             $this->data = $this->model->$_REQUEST['action']();
